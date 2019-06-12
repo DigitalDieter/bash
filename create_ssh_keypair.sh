@@ -1,5 +1,4 @@
 #!/usr/bin bash
-
 echo "Generating  sshkeys (without password)"
 if [ ! -d /home/$(whoami)/.ssh ]
 then
