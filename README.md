@@ -1,5 +1,7 @@
 #### Some useful bash scripts / code snippets to automate boring stuff
 
+#create_ssh_keypair.sh
+
 adduser anaconda --disabled-password --shell /bin/bash --gecos "User" $username
 echo "Create dir"
 mkdir /opt/anaconda
