@@ -5,11 +5,18 @@ sudo apt-get install -y build-essential cmake g++ gfortran git pkg-config python
 sudo apt-get autoremove
 sudo rm -rf /var/lib/apt/lists/*
 
+sudo adduser anaconda
+sudo usermod -aG sudo anaconda
+ufw app list
+
 
 
 #################    ANACONDA  #################
 echo "Create user anaconda"
-adduser anaconda --disabled-password --shell /bin/bash --gecos "User" $username
+
+sudo adduser anaconda --disabled-password --shell /bin/bash --gecos "User" $username
+adduser anaconda --disabled-password --shell /bin/bash --gecos "sudo" $username
+
 
 if [ ! -d /opt/anaconda ]
 then
