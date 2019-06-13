@@ -29,9 +29,7 @@ then
     echo "Install anaconda"
     installation_dir='/homne/anaconda'
     sudo -u anaconda sudo bash Anaconda3-2019.03-Linux-x86_64.sh -b -f -p ${installation_dir}
-
-    bash Anaconda3-2019.03-Linux-x86_64.sh -b -f -p ${installation_dir}
-    echo "Change folder permission"
+    echo "Execute conda info"
     conda info
 fi
 
