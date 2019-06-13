@@ -21,6 +21,7 @@ ufw app list
 
 if [ ! -d /homne/anaconda/anaconda ]
 then
+    su - anaconda
     echo "Create folder for installation"
     mkdir -p /homne/anaconda/anaconda
     cd /homne/anaconda/anaconda
@@ -30,14 +31,9 @@ then
     installation_dir='/homne/anaconda/anaconda'
     bash Anaconda3-2019.03-Linux-x86_64.sh -b -f -p ${installation_dir}
     echo "Change folder permission"
-    sudo chown -R anaconda:anaconda /homne/anaconda/anaconda
-    sudo chmod -R go-w /homne/anaconda/anaconda
-
-    su anaconda
-
+    sudo chown -R anaconda:anaconda /homne/anaconda/
+    sudo chmod -R go-w /homne/anaconda/
     conda info
 fi
-
-
 
 
