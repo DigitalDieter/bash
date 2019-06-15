@@ -3,8 +3,8 @@
 pip3 install jupyter
 
 
-# Libs for R
-sudo apt-get install r-base r-base-dev libssl-dev libcurl3-dev curl
+# Install libs for R support 
+sudo apt-get install -y r-base r-base-dev libssl-dev libcurl3-dev curl
 
 pip install --upgrade jupyter_enterprise_gateway+
 
