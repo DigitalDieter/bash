@@ -10,13 +10,6 @@ sudo apt-get install -y build-essential cmake g++ gfortran git pkg-config python
 sudo apt-get autoremove
 
 #Create user anaconda
-sudo adduser anaconda
-
-#Add user to group sudo
-sudo usermod -aG sudo anaconda
-
-#Show firewall activity
-ufw app list
 
 
 if [ ! -d /homne/anaconda/anaconda ]
@@ -32,7 +25,3 @@ then
     echo "Execute conda info"
     conda info
 fi
-
-
-
-
