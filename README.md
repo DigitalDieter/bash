@@ -16,11 +16,25 @@ bash name-of-script.sh
 ```
 
 
-
 create_ssh_keypair.sh
 - create an SSH ed25519 keypair for the actual logged in user
 
+git_readme_update.sh
+-
+
+install_anconda.sh
+-
+
+postgres_setup.sh
+-
 
 
 testing_docker_compose.sh
 - create
+
+start_jupyter.sh
+
+
+testing_docker_compose.sh
+
+ubuntu_deeplearning_setup.sh
