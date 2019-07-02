@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/DigitalDieter/bash_script_collection.svg?branch=master)](https://travis-ci.org/DigitalDieter/bash_script_collection)
+
 # bash scripts collection
 
 Some useful bash scripts / code snippets to automate boring stuff
