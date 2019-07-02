@@ -20,21 +20,22 @@ create_ssh_keypair.sh
 - create an SSH ed25519 keypair for the actual logged in user
 
 git_readme_update.sh
--
+- git add README.md
+- git commit -m "README.md updated"
+- git push
 
 install_anconda.sh
--
+- install anaconda
 
 postgres_setup.sh
--
+- install postgres
 
 
 testing_docker_compose.sh
-- create
+- testing docker compose installation
 
 start_jupyter.sh
-
-
-testing_docker_compose.sh
+- start jupyter notebook
 
 ubuntu_deeplearning_setup.sh
+- install dependencies for deeplearning setup
