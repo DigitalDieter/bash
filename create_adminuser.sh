@@ -1,4 +1,4 @@
-
+#!/bin/bash
 # Create admin user
 
 read -p "Enter username: " USER

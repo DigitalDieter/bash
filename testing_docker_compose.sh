@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
 text2print="Create test directory"
 echo -e "\e[1;32m $text2print \e[0m"

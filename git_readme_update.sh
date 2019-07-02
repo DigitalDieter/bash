@@ -1,3 +1,4 @@
+#!/bin/bash
 
 # Update GitHub README.md
 

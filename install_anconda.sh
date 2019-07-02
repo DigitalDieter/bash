@@ -1,3 +1,4 @@
+#!/bin/bash
 
 # Script Anaconda install script (install Installation Dependencies, install anaconda)
 

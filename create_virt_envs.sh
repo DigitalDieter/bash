@@ -1,3 +1,4 @@
+#!/bin/bash
 
 # Script create virtual conda / python environments
 

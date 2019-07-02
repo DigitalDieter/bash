@@ -1,3 +1,4 @@
+#!/bin/bash
 
 # Generate ssh keypair for current user
 
