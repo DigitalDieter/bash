@@ -1,7 +1,6 @@
 # bash scripts collection
 
 Some useful bash scripts / code snippets to automate boring stuff
-On this repository, you can find useful Powershell Code-Snippets and Scripts. As well as the installation instructions for PowerShell 6.2.1 core on Linux and Mac OS.
 
 
 create_ssh_keypair.sh
@@ -11,3 +10,12 @@ create_ssh_keypair.sh
 
 testing_docker_compose.sh
 - create
+
+
+install_anconda.sh
+```bash
+# execute script
+chmod +x install_anconda.sh
+# or
+bash install_anconda.sh
+```
