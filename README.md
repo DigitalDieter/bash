@@ -19,9 +19,9 @@ create_adminuser.sh
 - create new user
 - add user to sudo group
 
-
 create_ssh_keypair.sh
-- create an SSH ed25519 keypair for the actual logged in user
+- create new SSH keypair (ed25519)
+- actual logged in user used as base
 
 git_readme_update.sh
 - git add README.md
