@@ -9,7 +9,7 @@ For running the scripts execute one of the following commands
 
 ```bash
 # execute script
-chmod +x
+chmod +x name-of-script.sh
 ./name-of-script.sh
 # or
 bash name-of-script.sh
