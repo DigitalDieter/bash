@@ -15,6 +15,10 @@ chmod +x name-of-script.sh
 bash name-of-script.sh
 ```
 
+create_adminuser.sh
+- create new user
+- add user to sudo group
+
 
 create_ssh_keypair.sh
 - create an SSH ed25519 keypair for the actual logged in user
