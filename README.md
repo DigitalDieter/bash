@@ -5,6 +5,17 @@ Some useful bash scripts / code snippets to automate boring stuff
 
 ## Description & Execution examples
 
+For running the scripts execute one of the following commands
+
+```bash
+# execute script
+chmod +x name-of-script.sh
+# or
+bash name-of-script.sh
+```
+
+
+
 create_ssh_keypair.sh
 - create an SSH ed25519 keypair for the actual logged in user
 
@@ -12,12 +23,3 @@ create_ssh_keypair.sh
 
 testing_docker_compose.sh
 - create
-
-
-install_anconda.sh
-```bash
-# execute script
-chmod +x install_anconda.sh
-# or
-bash install_anconda.sh
-```
