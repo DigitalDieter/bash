@@ -12,7 +12,7 @@ sudo apt-get autoremove
 #Create user anaconda
 
 
-if [ ! -d /homne/anaconda/anaconda ]
+if [ ! -d /home/anaconda/anaconda ]
 then
     sudo chown -R anaconda:anaconda /home/anaconda
     sudo chmod -R go-w /home/anaconda
