@@ -1,4 +1,6 @@
 
+# Create admin user
+
 read -p "Enter username: " USER
 echo "create user"
 sudo adduser --gecos "" $USER

@@ -1,4 +1,6 @@
-#!/usr/bin/env bash
+
+# Download / Install postgressql 
+
 echo"Download and Setup a postgres db"
 # Install dependencies
 sudo apt install-y postgresql-client-common postgresql postgresql-contrib  postgresql-client-common

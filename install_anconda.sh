@@ -1,4 +1,6 @@
 
+# Script Anaconda install script (install Installation Dependencies, install anaconda)
+
 #Updating the system
 sudo apt-get update
 sudo apt-get -y upgrade
@@ -11,6 +13,7 @@ sudo apt-get autoremove
 
 if [ ! -d /home/anaconda/anaconda ]
 then
+    echo "Setting file/folder permissions"
     sudo chown -R anaconda:anaconda /home/anaconda
     sudo chmod -R go-w /home/anaconda
     echo "Downloading anaconda script intaller"
