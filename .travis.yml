@@ -5,4 +5,4 @@ before_script:
 
 script:
     - bash hello_travis.sh
-    - bash start_jupyter.sh
+    - bash gen_ssh_keys.sh
