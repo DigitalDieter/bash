@@ -2,6 +2,21 @@
 
 # Script Anaconda install script (install Installation Dependencies, install anaconda)
 
+# Create admin user
+
+#read -p "Enter username: " USER
+echo "create anaconda user"
+
+# create user without password for automated install
+sudo adduser --disabled-password --gecos "" anaconda
+#sudo adduser --gecos "" anaconda
+
+echo "add anaconda user to sudo group"
+sudo usermod -aG sudo anaconda
+echo "change user to newly created"
+sudo su - anaconda
+
+Sleep 2
 #Updating the system
 sudo apt update
 sudo apt -y upgrade
@@ -12,10 +27,6 @@ sudo apt  install -y build-essential cmake g++ gfortran git pkg-config python-de
 #Removing old packages
 sudo apt autoremove
 
-
-curl -O https://repo.anaconda.com/archive/Anaconda3-2019.03-Linux-x86_64.sh
-bash Anaconda3-2019.03-Linux-x86_64.sh
-
 if [ ! -d /home/anaconda/anaconda ]
 then
     echo "Setting file/folder permissions"
@@ -25,9 +36,9 @@ then
     curl -O https://repo.anaconda.com/archive/Anaconda3-2019.03-Linux-x86_64.sh
     echo "Install anaconda"
     installation_dir='/home/anaconda/anaconda'
-    #sudo -u anaconda sudo bash Anaconda3-2019.03-Linux-x86_64.sh -b -f -p ${installation_dir}
-    sudo bash Anaconda3-2019.03-Linux-x86_64.sh -b -f -p ${installation_dir}
-
+    sudo -u anaconda sudo bash Anaconda3-2019.03-Linux-x86_64.sh -b -f -p ${installation_dir}
+    echo "change user"
+    su - anaconda
     echo "Execute conda info"
     conda info
 fi
