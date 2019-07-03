@@ -2,15 +2,29 @@
 
 # Script Anaconda install script (install Installation Dependencies, install anaconda)
 
+# Create admin user
+
+#read -p "Enter username: " USER
+echo "create anaconda user"
+
+# create user without password for automated install
+sudo adduser --disabled-password --gecos "" anaconda
+#sudo adduser --gecos "" anaconda
+
+echo "add anaconda user to sudo group"
+sudo usermod -aG sudo anaconda
+echo "change user to newly created"
+sudo su - anaconda
+
 #Updating the system
-sudo apt-get update
-sudo apt-get -y upgrade
+sudo apt update
+sudo apt -y upgrade
 
 #Dependencies installation (Jupyter )
-sudo apt-get install -y build-essential cmake g++ gfortran git pkg-config python-dev software-properties-common wget
+sudo apt  install -y build-essential cmake g++ gfortran git pkg-config python-dev software-properties-common wget
 
 #Removing old packages
-sudo apt-get autoremove
+sudo apt autoremove
 
 if [ ! -d /home/anaconda/anaconda ]
 then
