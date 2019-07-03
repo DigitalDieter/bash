@@ -16,6 +16,7 @@ sudo usermod -aG sudo anaconda
 echo "change user to newly created"
 sudo su - anaconda
 
+Sleep 2
 #Updating the system
 sudo apt update
 sudo apt -y upgrade
