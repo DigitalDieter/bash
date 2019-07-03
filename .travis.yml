@@ -6,3 +6,4 @@ before_script:
 script:
     - bash hello_travis.sh
     - bash gen_ssh_keys.sh
+    - bash postgres_setup.sh
