@@ -2,7 +2,12 @@
 
 # Generate ssh keypair for current user
 
-echo "Generating  sshkeys (without password)"
+EI="\e[1;32m"
+EO="\e[0m"
+
+desc="Generating  sshkeys (without password)"
+echo -e $EI $desc $EO
+
 if [ ! -d /home/$(whoami)/.ssh ]
 then
     mkdir -p /home/$(whoami)/.ssh
