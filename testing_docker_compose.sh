@@ -1,14 +1,54 @@
 #!/bin/bash
 
-text2print="Create test directory"
-echo -e "\e[1;32m $text2print \e[0m"
+# Install docker & docker-compose
+# create test flask app
 
+EI="\e[1;32m"
+EO="\e[0m"
+
+
+desc="Install dependencies"
+echo -e $EI $desc $EO
+sudo apt install -y apt-transport-https ca-certificates curl software-properties-common
+
+
+desc="Adding docker gpg key"
+echo -e $EI $desc $EO
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+
+
+desc="Adding repository"
+echo -e $EI $desc $EO
+sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic test"
+
+
+desc="Install docker"
+echo -e $EI $desc $EO
+sudo apt install -y docker-ce
+
+
+desc="Adding user to docker group"
+echo -e $EI $desc $EO
+sudo usermod -aG docker $(whoami)
+
+
+desc="Install docker compose"
+echo -e $EI $desc $EO
+sudo curl -L https://github.com/docker/compose/releases/download/1.17.0/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
+
+
+desc="Creating test directory"
+echo -e $EI $desc $EO
 mkdir test_docker_compose
+
+
+desc="Chaning directory"
+echo -e $EI $desc $EO
 cd test_docker_compose
 
-echo "Create app.py"
-echo -e "\e[1;32m $text2print \e[0m"
 
+desc="Creating app.py"
+echo -e $EI $desc $EO
 sudo dd of=app.py<< EOF
 import time
 
@@ -38,9 +78,8 @@ def hello():
 EOF
 
 
-text2print="Create requirements.txt"
-echo -e "\e[1;32m $text2print \e[0m"
-
+desc="Creating requirements.txt"
+echo -e $EI $desc $EO
 sudo dd of=requirements.txt<< EOF
 flask
 redis
@@ -48,9 +87,8 @@ EOF
 
 
 # Dockerfile
-text2print=0"Create Dockerfile"
-echo -e "\e[1;32m $text2print \e[0m"
-
+desc="Creating dockerfile"
+echo -e $EI $desc $EO
 sudo dd of=Dockerfile<< EOF
 FROM python:3.7-alpine
 WORKDIR /code
@@ -64,9 +102,8 @@ CMD ["flask", "run"]
 EOF
 
 
-# docker-compose
-text2print="Create docker-compose file"
-echo -e "\e[1;32m $text2print \e[0m"
+desc="Creating docker-compose file"
+echo -e $EI $desc $EO
 sudo dd of=docker-compose.yml<< EOF
 version: '3'
 services:
@@ -79,10 +116,11 @@ services:
 EOF
 
 
-text2print="Checking requirements.txt"
-echo -e "\e[1;32m $text2print \e[0m"
+desc="Installing required packages from requirements.txt"
+echo -e $EI $desc $EO
 python -m pip install -r requirements.txt
 
-text2print="Build and run app"
-echo -e "\e[1;32m $text2print \e[0m"
+
+desc="Building and running app.py"
+echo -e $EI $desc $EO
 docker-compose up
