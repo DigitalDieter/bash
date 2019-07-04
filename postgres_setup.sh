@@ -15,7 +15,7 @@ desc="Creating postgres user & database"
 echo -e $EI $desc $EO
 sudo -u postgres createuser -s $(whoami); createdb $(whoami)
 
-desc="Checking if postgres service is running"
-echo -e $EI $desc $EO
-ss -nlt |grep 5432
+#desc="Checking if postgres service is running"
+#echo -e $EI $desc $EO
+#ss -nlt |grep 5432
 
