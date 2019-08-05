@@ -2,7 +2,7 @@
 
 # bash scripts collection
 
-Some useful bash scripts / code snippets to automate boring stuff
+Some useful bash scripts/code snippets to automate boring stuff
 
 
 ## Description & Execution examples
