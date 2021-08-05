@@ -14,5 +14,5 @@ printf "\n${BLUE}[+]${RESET}${WHITEB} Generating  sshkeys (without password) ${R
 if [[  ! -d /home/$(whoami)/.ssh ]]
 then
 sudo mkdir -p $HOME/$(whoami)/.ssh
-sudo ssh-keygen -t ed25519 -o -a 100 -N "" -f $HOME/.ssh/$(whoami)
+sudo ssh-keygen -t rsa -o -a 100 -N "" -f $HOME/.ssh/$(whoami)
 fi
